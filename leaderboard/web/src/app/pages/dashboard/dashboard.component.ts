@@ -16,7 +16,9 @@ interface Team {
   downTimeSeconds: number;
   point: number;
 }
-const TOTAL_TIME = 68400;
+
+// const TOTAL_TIME = 68400;
+
 function convertTeam(teamResponse: TeamResponse): Team {
    return {
     'name': teamResponse.teamName,
@@ -43,7 +45,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const url = environment.backendUrl + "/teams"; // environment.backendUrl;
+    const url = environment.backendUrl + '/teams'; // environment.backendUrl;
     this.pollingData = Observable.interval(5000)
       .subscribe((value) => {
         this.http.get(url)
