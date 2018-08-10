@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const url = environment.backendUrl; // environment.backendUrl;
+    const url = environment.backendUrl + "/teams"; // environment.backendUrl;
     this.pollingData = Observable.interval(5000)
       .subscribe((value) => {
         this.http.get(url)
