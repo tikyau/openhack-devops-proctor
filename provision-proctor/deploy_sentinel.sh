@@ -17,7 +17,7 @@ declare teamEndPoint=""
 declare csvFile=""
 
 # Initialize parameters specified from command line
-while getopts ":p:n:" arg; do
+while getopts ":f:p:n:" arg; do
     case "${arg}" in
         f)
             csvFile=${OPTARG}
